@@ -1,0 +1,45 @@
+{
+  "name": "drei-html-fix",
+  "description": "drei-html-fix is a React utility that resolves alignment and offset issues with the Html component from @react-three/drei",
+  "private": false,
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "bundle": "tsup src/index.ts"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  },
+  "author": "Dmyto Hordus",
+  "license": "MIT",
+  "keywords": [
+    "drei",
+    "react-three",
+    "threejs",
+    "html",
+    "offset",
+    "dpi",
+    "fix",
+    "component",
+    "react",
+    "web",
+    "3d",
+    "interaction",
+    "position",
+    "layout",
+    "responsive"
+  ],
+  "homepage": "https://github.com/IsaacUA",
+  "github": {
+    "url": "https://github.com/IsaacUA/drei-html-fix"
+  }
+}
