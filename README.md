@@ -18,6 +18,8 @@ To install `drei-html-fix`, run:
 npm install drei-html-fix
 ```
 
+x
+
 ## Usage
 
 To use drei-html-fix, import '<CanvasWrapper>' and wrap '<Canvas>' component:
@@ -49,12 +51,3 @@ Contributions are welcome! If you encounter any issues or have suggestions, plea
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Author
-
-- [GitHub Profile](https://github.com/IsaacUA)
-- [Email me](mailto:dmytro.hordus@gmail.com)
-
-## GitHub Repository
-
-You can find the project repository [here](https://github.com/IsaacUA/drei-html-fix).
