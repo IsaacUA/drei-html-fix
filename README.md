@@ -1,8 +1,6 @@
 # drei-html-fix
 
-<h1 align="center" title="file-type">
- <img src="media/logo.png" alt="file-type logo">
-</h1>
+![Drei HTML Fix Logo](https://raw.githubusercontent.com/IsaacUA/drei-html-fix/main/media/logo.png)
 
 `drei-html-fix` is an npm package designed to address the offset issues of the Drei `HTML` component in React Three Fiber projects, particularly on high DPI devices. This package ensures that HTML content is properly positioned and displayed within your 3D scenes.
 
