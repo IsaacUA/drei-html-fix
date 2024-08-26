@@ -25,23 +25,26 @@ x
 To use drei-html-fix, import '<CanvasWrapper>' and wrap '<Canvas>' component:
 
 ```tsx
-import { Html } from 'drei-html-fix'
-import { CanvasWrapper } from '@react-three/fiber'
+import { Box, Html, OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { CanvasWrapper } from 'drei-html-fix' // import CanvasWrapper
 
 function App() {
   return (
-    <CanvasWrapper>
-      {/* Wrap react-three-fiber Canvas */}
-      <Canvas>
-        <Html>
-          <div>Your HTML content here</div>
-        </Html>
-      </Canvas>
-    </CanvasWrapper>
+    <>
+      <CanvasWrapper>
+        {/* Wrap react-three-fiber Canvas */}
+        <Canvas>
+          <Html transform>
+            <div>
+              <p>Hello World</p>
+            </div>
+          </Html>
+        </Canvas>
+      </CanvasWrapper>
+    </>
   )
 }
-
-export default App
 ```
 
 ## Contributing
