@@ -15,9 +15,9 @@ const CanvasWrapper: FC<Props> = ({ children }) => {
         const canvasHeight = canvasElement.clientHeight
         const canvasWidth = canvasElement.clientWidth
 
-        setWidth(`${canvasWidth % 2 === 0 ? canvasWidth - 1 : canvasWidth}px`)
+        setWidth(`${canvasWidth % 2 === 0 ? canvasWidth + 1 : canvasWidth}px`)
         setHeight(
-          `${canvasHeight % 2 !== 0 ? canvasHeight - 1 : canvasHeight}px`
+          `${canvasHeight % 2 !== 0 ? canvasHeight + 1 : canvasHeight}px`
         )
       }
     }
