@@ -4,6 +4,10 @@
 
 `drei-html-fix` is an npm package designed to address the offset issues of the Drei `HTML` component in React Three Fiber projects, particularly on high DPI devices. This package ensures that HTML content is properly positioned and displayed within your 3D scenes.
 
+## What's new?
+
+Added responsive resize of the canvas
+
 ## Features
 
 - Fixes offset issues for Drei's `HTML` component.
@@ -22,27 +26,34 @@ x
 
 ## Usage
 
-To use drei-html-fix, import '<CanvasWrapper>' and wrap '<Canvas>' component:
+To use drei-html-fix:
+
+- import '<CanvasWrapper>' and use it instead of '<Canvas>' component
+- iframe's hight and width should be an even number
 
 ```tsx
 import { Box, Html, OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
 import { CanvasWrapper } from 'drei-html-fix' // import CanvasWrapper
 
 function App() {
   return (
     <>
-      <CanvasWrapper>
-        {/* Wrap react-three-fiber Canvas */}
-        <Canvas>
-          <Html transform>
-            <div>
-              <p>Hello World</p>
-            </div>
-          </Html>
-        </Canvas>
+      {/* Use <CanvasWrapper> instead react-three-fiber <Canvas> */}
+      <CanvasWrapper
+        canvasProps={
+          { // Use <Canvas> props inside canvasProps
+            camera: { fov: 60, position: [0, 0, 5] },
+            shadows: true,
+             dpr: [1, 2],
+          }
+        }>
+        <Html transform>
+          <div>
+            <p>Hello World</p>
+          </div>
+        </Html>
       </CanvasWrapper>
-    </>
+    </CanvasWrapper>
   )
 }
 ```
