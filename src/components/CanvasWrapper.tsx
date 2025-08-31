@@ -14,7 +14,7 @@ const CanvasWrapper: FC<Props> = ({ children, canvasProps = {} }) => {
     const observer = new ResizeObserver(([entry]) => {
       const { width, height } = entry.contentRect
       setSize({
-        width: Math.round(width % 2 === 0 ? width + 1 : width),
+        width: Math.round(width % 2 !== 0 ? width + 1 : width),
         height: Math.round(height % 2 !== 0 ? height + 1 : height),
       })
     })
