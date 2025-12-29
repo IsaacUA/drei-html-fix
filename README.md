@@ -22,8 +22,6 @@ To install `drei-html-fix`, run:
 npm install drei-html-fix
 ```
 
-x
-
 ## Usage
 
 To use drei-html-fix:
@@ -53,7 +51,7 @@ function App() {
           </div>
         </Html>
       </CanvasWrapper>
-    </CanvasWrapper>
+		</>
   )
 }
 ```
