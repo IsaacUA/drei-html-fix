@@ -1,7 +1,7 @@
 {
   "name": "@isaac_ua/drei-html-fix",
   "description": "drei-html-fix is a React utility that resolves alignment and offset issues with the Html component from @react-three/drei",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
