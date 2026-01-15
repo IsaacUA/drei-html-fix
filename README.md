@@ -4,10 +4,6 @@
 
 `drei-html-fix` is an npm package designed to address the offset issues of the Drei `HTML` component in React Three Fiber projects, particularly on high DPI devices. This package ensures that HTML content is properly positioned and displayed within your 3D scenes.
 
-## What's new?
-
-Added responsive resize of the canvas
-
 ## Features
 
 - Fixes offset issues for Drei's `HTML` component.
@@ -19,7 +15,7 @@ Added responsive resize of the canvas
 To install `drei-html-fix`, run:
 
 ```bash
-npm install drei-html-fix
+npm install @isaac_ua/drei-html-fix
 ```
 
 ## Usage
@@ -27,31 +23,36 @@ npm install drei-html-fix
 To use drei-html-fix:
 
 - import '<CanvasWrapper>' and use it instead of '<Canvas>' component
-- iframe's hight and width should be an even number
+- ⚠️ Important: <span style="color:red">The HTML component and all its children must have width and height as whole numbers </span>(no decimals). Using decimal values (e.g., 19.5px) can break the positioning of the HTML content.
 
 ```tsx
 import { Box, Html, OrbitControls } from '@react-three/drei'
-import { CanvasWrapper } from 'drei-html-fix' // import CanvasWrapper
+import { CanvasWrapper } from '@isaac_ua/drei-html-fix' // import CanvasWrapper
 
 function App() {
   return (
     <>
       {/* Use <CanvasWrapper> instead react-three-fiber <Canvas> */}
       <CanvasWrapper
-        canvasProps={
-          { // Use <Canvas> props inside canvasProps
-            camera: { fov: 60, position: [0, 0, 5] },
-            shadows: true,
-             dpr: [1, 2],
-          }
-        }>
+        canvasProps={{
+          // Use <Canvas> props inside canvasProps
+          camera: { fov: 60, position: [0, 0, 5] },
+          shadows: true,
+          dpr: [1, 2],
+        }}
+      >
         <Html transform>
-          <div>
+          <div
+            style={{
+              background: 'white',
+              padding: '19px 19px',
+            }}
+          >
             <p>Hello World</p>
           </div>
         </Html>
       </CanvasWrapper>
-		</>
+    </>
   )
 }
 ```
